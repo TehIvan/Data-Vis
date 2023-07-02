@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualisation - Zeply</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Data Visualisation Limited</h1>
+        <h2>By Zeply</h2>
+    </div>
+    <div class="file-container">
+        <input type="file" id="file-input" required>
+    </div>
+    <script src="script.js"></script>
+
+    <div id="graph">
+        <h2>Your Graph</h2>
+        <select name="" id="graph-type" onchange="onChange()">
+            <option value="bar">Bar</option>
+            <option value="line">Line</option>
+            <option value="pie">Pie</option>
+        </select>
+        <canvas id="chart"></canvas>
+    </div>
+</body>
+
+</html>
