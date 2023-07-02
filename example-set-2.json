@@ -1,0 +1,12 @@
+{
+    "labels": ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    "datasets": [{
+      "label": "# of Votes",
+      "data": [12, 19, 3, 5, 2, 3],
+      "borderWidth": 1
+    }, {
+      "label": "Age of Voters",
+      "data": [10, 17, 6, 2, 1, 1],
+      "borderWidth": 1
+    }]
+}
