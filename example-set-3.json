@@ -1,0 +1,6 @@
+{
+    "label": "List",
+    "labels": ["A", "B", "C", "D", "E", "F"],
+    "data": [500, 400, 200, 200, 100, 2],
+    "borderWidth": 1
+}

@@ -18,6 +18,7 @@ fileInput.onchange = () => {
   fileReader.readAsText(selectedFiles[0]);
 
   fileReader.onload = function () {
+
     resultComplete(true, fileReader.result);
   };
 
@@ -33,7 +34,10 @@ function onChange() {
   if (chart != null) chart.destroy();
   chart = new Chart(document.getElementById("chart"), {
     type: type,
-    data: _data,
+    data: _data.datasets !== null && _data.datasets !== undefined ? _data : {
+      labels: _data.labels, 
+      datasets: [_data]
+    },
     options: {
       scales: {
         y: {
@@ -57,6 +61,7 @@ function resultComplete(ready, data) {
   const opt = document.getElementById("graph-type");
 
   _data = newData;
+  
 
   const type = opt.options[opt.selectedIndex].value;
 
@@ -64,7 +69,10 @@ function resultComplete(ready, data) {
 
   chart = new Chart(document.getElementById("chart"), {
     type: type,
-    data: newData,
+    data: newData.datasets !== null && newData.datasets !== undefined ? newData : {
+      labels: newData.labels, 
+      datasets: [newData]
+    },
     options: {
       scales: {
         y: {
